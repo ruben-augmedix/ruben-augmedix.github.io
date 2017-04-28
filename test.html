@@ -91,9 +91,9 @@
                 <li role="separator" class="divider ml-10"></li>                
 				<li><a class="doctor-name" style="display: none;" href="javascript:void(0);">None</a></li>
 				<li class="doctor-connect">                            	
-	               	<div id="loading-label">
+	               <!--	<div id="loading-label">
 	                	Loading Providers
-	                </div>
+	                </div> -->
 	               	<div id="connection-container" class="ml-10">
 	                    <div id="dlist-container" class="select-menu"></div>
 	                    <button type="submit" class="btn btn-success btn-xs btn-connect" id="connect" style="margin-left: 10px">Connect</button>
@@ -2140,51 +2140,10 @@
 						</div>
 					</div>		
 				</article>
-				<article class="row im-box">
-					<div class="im-container col-lg-12">						
-						<textarea class="form-control instantmessage" rows="5"
-							id="instantmessage" maxlength="100"></textarea>
-						<button class="hourGlassBtn" disabled="disabled">
-							<i class="fa fa-hourglass-half" aria-hidden="true"></i>
-						</button>
-						<span class="label label-white characterCounter" id="characterCounter">100</span>
-					</div>
-				</article>
-				<article class="row card-container">
-					<div class="panel-default copy-ehr">
-					  <div class="panel-heading">
-					    <h3 class="panel-title"><label>Augmedix Cards </label> <small></small></h3>
-					  </div>
-					  <div class="panel-body">
-					    <div class="card-log">
-							<p>No card logs available</p>
-						</div>
-						<div class="clipboard-icons" style="display: block;">
-							<a id="copytext" href="javascript:void(0);" class="btn btn-default bg-gray icon-font">
-							  <i class="note-writer-list" aria-hidden="true"></i> 
-							</a>
-						</div>
-						<div id="content" class="cardlog-content"></div>
-					  </div>
-					</div>
-					<!-- 
-					<div class="copy-ehr" style="margin-bottom: 10px">
-						<label>Augmedix Cards </label> <small></small>
-						<div class="card-log">
-							<p>No card logs available</p>
-						</div>
-						<div class="clipboard-icons"
-							style="display: block;">
-							<a id="copytext" href="#" class="btn btn-xs btn-success">Copy</a>
-							<a id="cuttext" href="#" class="btn btn-xs btn-danger">Cut</a>
-						</div>
-						<div id="content" class="cardlog-content"></div>
-					</div> -->
-				</article>
 				<article class="row audio-player">
 					<div class="panel-default" id="audio_header_container">
 					  <div class="panel-heading" id="audio_header_text">
-					    <h3 class="panel-title"><label>Audio Recordings</label>
+					    <h3 class="panel-title"><label>Speech to Text</label>
 					    <a id="audio-tooltip" href="javascript:void(0);" data-toggle="tooltip" title=""></a></h3>
 					  </div>
 					  <div class="panel-body">
@@ -2228,49 +2187,49 @@
 							
 					  </div>
 					</div>
-
-					<!-- 
-					<div id="audio_header_container">
-
-						<div id="audio_header_text">
-							<label>Audio Recordings</label> 
-							<a id="audio-tooltip" href="javascript:void(0);" data-toggle="tooltip" title=""></a>
-							<div class="pull-right settings-label">
-								<a id="audio-volume-controller" class="volume-audio-medium" href="" title=""></a>
-								<div class="audio-volume-bar">
-									<div class="audio-volume-bkg">
-									</div><div class="audio-volume"></div>
-								</div>
-								<div id="audio-settings-icon" class="fa fa-cog"></div>
-								<a id="audio-settings" class="fa fa-caret-down" href="" title=""></a>
-							</div>							
-							
-						</div>
-						
-						<div id="manualrecord-controls" class="pull-right hide">
-								<a id="startmanual-record" class="button btn disabled" href="" title="">Stop stream and record</a> 
-								<a id="return-toStream" class="button hide" href="" title="">Return to stream</a> 
-						</div>
-
-						<div id="audio_file_status">
-							<ul class="audio-count">
-								<li id="audioToReviewCount">0 to review</li>
-								<li id="audioPendingCount" class="audio-count-list">0 pending</li>
-								<li id="audioCheckedCount" class="audio-count-list">0 checked</li>
-							</ul>
-						</div>
-						<div id="no_audio_clip">
-							<span>No audio recorded</span>
-						</div>
-					</div>
-					<div id="audio_player_container">
-						<table class="table table-striped">
-							<tbody>
-
-							</tbody>
-						</table>
-					</div>-->
 				</article>
+				<article class="row im-box">
+					<div class="im-container col-lg-12">						
+						<textarea class="form-control instantmessage" rows="5"
+							id="instantmessage" maxlength="100"></textarea>
+						<button class="hourGlassBtn" disabled="disabled">
+							<i class="fa fa-hourglass-half" aria-hidden="true"></i>
+						</button>
+						<span class="label label-white characterCounter" id="characterCounter">100</span>
+					</div>
+				</article>
+				<article class="row card-container">
+					<div class="panel-default copy-ehr">
+					  <div class="panel-heading">
+					    <h3 class="panel-title"><label>Augmedix Cards </label> <small></small></h3>
+					  </div>
+					  <div class="panel-body">
+					    <div class="card-log">
+							<p>No card logs available</p>
+						</div>
+						<div class="clipboard-icons" style="display: block;">
+							<a id="copytext" href="javascript:void(0);" class="btn btn-default bg-gray icon-font">
+							  <i class="note-writer-list" aria-hidden="true"></i> 
+							</a>
+						</div>
+						<div id="content" class="cardlog-content"></div>
+					  </div>
+					</div>
+					<!-- 
+					<div class="copy-ehr" style="margin-bottom: 10px">
+						<label>Augmedix Cards </label> <small></small>
+						<div class="card-log">
+							<p>No card logs available</p>
+						</div>
+						<div class="clipboard-icons"
+							style="display: block;">
+							<a id="copytext" href="#" class="btn btn-xs btn-success">Copy</a>
+							<a id="cuttext" href="#" class="btn btn-xs btn-danger">Cut</a>
+						</div>
+						<div id="content" class="cardlog-content"></div>
+					</div> -->
+				</article>
+
 				<section class="time-studies-minimized">
 					<div class="minimized-switch">
 						<a><img width="30" src="https://s3-us-west-1.amazonaws.com/augmedix.cloudfront.assets.test/clone/scribe/images/Timer Icon_grey_2.png" /></a>
