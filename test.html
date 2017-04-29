@@ -2171,6 +2171,7 @@
 
 						    recognition.onstart = function() {
 						      recognizing = true;
+							console.log("Dictation started by the user");
 						    };
 
 						    recognition.onerror = function(event) {
@@ -2179,6 +2180,7 @@
 
 						    recognition.onend = function() {
 						      recognizing = false;
+							alert("Dictation stopped by the user");
 						    };
 
 						    recognition.onresult = function(event) {
@@ -2190,6 +2192,8 @@
 							  interim_transcript += event.results[i][0].transcript;
 							}
 						      }
+							console.log(interim_transcript,final_transcript);	    
+							    
 						      final_transcript = capitalize(final_transcript);
 						      final_span.innerHTML = linebreak(final_transcript);
 						      interim_span.innerHTML = linebreak(interim_transcript);
