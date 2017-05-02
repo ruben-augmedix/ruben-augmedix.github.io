@@ -2242,7 +2242,8 @@
 
 						    recognition.onstart = function() {
 						      recognizing = true;
-							console.log("Dictation started by the user");
+						      char_count = 0;
+						      console.log("Dictation started by the user");
 						    };
 
 						    recognition.onerror = function(event) {
@@ -2259,18 +2260,19 @@
 						      for (var i = event.resultIndex; i < event.results.length; ++i) {
 							if (event.results[i].isFinal) {
 							  final_transcript += event.results[i][0].transcript;
-						  	  char_count ++; 
 							} else {
 							  interim_transcript += event.results[i][0].transcript;
-							  char_count ++; 
 							}
 						      }
-							console.log(char_count);
-							console.log(interim_transcript,final_transcript);	    
+						
+						      console.log(interim_transcript,final_transcript);	    
 							    
 						      final_transcript = capitalize(final_transcript);
 						      final_span.innerHTML = linebreak(final_transcript);
 						      interim_span.innerHTML = linebreak(interim_transcript);
+							    
+						      char_count = final_span.innerHTML.length;
+						      console.log(char_count);
 
 						    };
 						  }
