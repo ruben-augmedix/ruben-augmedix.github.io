@@ -2270,15 +2270,15 @@
 						      final_span.innerHTML = linebreak(final_transcript);
 						      interim_span.innerHTML = linebreak(interim_transcript);
 							    
-						      console.log(final_span.innerHTML.length, " (final) ");
-						      console.log(interim_span.innerHTML.length, " (interim) ");
-							
-							if (final_span.innerHTML.length > 400){
-								console.log("Char length (final) exceeded 400!");    
-						       	}
-
-							if (interim_span.innerHTML.length > 400){
-								console.log("Char length (interim) exceeded 400!");    
+						      //track characther count (i.e. length).
+						      //we don't want the box expanding infinitely
+						      console.log(final_span.innerHTML.length + " (final)");
+						      console.log(interim_span.innerHTML.length + " (interim)");
+						
+							if (final_span.innerHTML.length > 350){
+								console.log("Char length (final) exceeded!");    
+						       	}else if (interim_span.innerHTML.length + final_span.innerHTML.length > 350){
+								console.log("Char length (final + interim) exceeded!");    
 						       	}
 
 						    };
