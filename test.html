@@ -2236,13 +2236,12 @@
 						  if ('webkitSpeechRecognition' in window) {
 
 						    var recognition = new webkitSpeechRecognition();
-						    var char_count = 0;
+							  
 						    recognition.continuous = true;
 						    recognition.interimResults = true;
 
 						    recognition.onstart = function() {
 						      recognizing = true;
-						      char_count = 0;
 						      console.log("Dictation started by the user");
 						    };
 
@@ -2271,8 +2270,16 @@
 						      final_span.innerHTML = linebreak(final_transcript);
 						      interim_span.innerHTML = linebreak(interim_transcript);
 							    
-						      char_count = final_span.innerHTML.length;
-						      console.log(char_count);
+						      console.log(final_span.innerHTML.length, " (final) ");
+						      console.log(interim_span.innerHTML.length, " (interim) ");
+							
+							if (final_span.innerHTML.length > 400){
+								console.log("Char length (final) exceeded 400!");    
+						       	}
+
+							if (interim_span.innerHTML.length > 400){
+								console.log("Char length (interim) exceeded 400!");    
+						       	}
 
 						    };
 						  }
