@@ -2215,8 +2215,8 @@
 					<div class="panel-default" id="audio_header_container">
 					  <div class="panel-heading" id="audio_header_text">
 					    <h3 class="panel-title"><label>Speech to Text</label>
-					    <a id="audio-tooltip" href="https://cloud.google.com/speech/" data-toggle="tooltip" title="Google Cloud Speech API enables developers to convert <b>audio to text</b> by applying <b>powerful neural network models</b> in an easy to use API. You can transcribe the text of users dictating to an application's microphone, transcribe audio files or <b>transcribe a live stream</b>."></a></h3>
-					  </div>
+					    <a id="audio-tooltip" href="https://cloud.google.com/speech/" data-toggle="tooltip" title="Google Cloud Speech API enables developers to convert <b>audio to text</b> by applying <b>powerful neural network models</b> in an easy to use API. You can transcribe the text of users dictating to an application's microphone, transcribe audio files or <b>transcribe a live stream</b>."></a></h3>		  
+					</div>
 					  <div class="panel-body">
 						<div>
 						  <a href="#" id="start_button" onclick="startDictation(event)">Dictate</a>
@@ -2242,7 +2242,7 @@
 
 						    recognition.onstart = function() {
 						      recognizing = true;
-						      console.log("Dictation started by the user");
+						      console.log("DICTATION STARTED BY THE USER");
 						    };
 
 						    recognition.onerror = function(event) {
@@ -2251,7 +2251,7 @@
 
 						    recognition.onend = function() {
 						      recognizing = false;
-							alert("Dictation stopped by the user");
+							console.log("DICTATION STOPPED BY THE USER");
 						    };
 
 						    recognition.onresult = function(event) {
@@ -2296,9 +2296,9 @@
 						  function startDictation(event) {
 						    if (recognizing) {
 						      recognition.stop();
-						      return;
+						      //return; //comment out to auto-restart onClick
 						    }
-						    final_transcript = '';
+						    final_transcript = ''; //clear previous text
 						    recognition.lang = 'en-US';
 						    recognition.start();
 						    final_span.innerHTML = '';
