@@ -2252,6 +2252,8 @@
 						    recognition.onend = function() {
 						      recognizing = false;
 							console.log("DICTATION STOPPED BY THE USER");
+							//restart
+							recognition.start();
 						    };
 
 						    recognition.onresult = function(event) {
@@ -2278,6 +2280,8 @@
 							if (interim_span.innerHTML.length + final_span.innerHTML.length > 400){
 								console.log("Char length (final + interim) exceeded! clearing old text."); 
 								final_transcript = '';
+								final_span.innerHTML = '';
+						    		interim_span.innerHTML = '';
 						       	}
 
 						    };
@@ -2296,7 +2300,7 @@
 						  function startDictation(event) {
 						    if (recognizing) {
 						      recognition.stop();
-						      //return; //comment out to auto-restart onClick
+						      return;
 						    }
 						    final_transcript = ''; //clear previous text
 						    recognition.lang = 'en-US';
