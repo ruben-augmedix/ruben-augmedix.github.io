@@ -2219,7 +2219,7 @@
 					</div>
 					  <div class="panel-body">
 						<div>
-						  <a href="#" id="start_button" onclick="startDictation(event)">Dictate</a>
+						  <a href="" id="start_button" onclick="startDictation(event)">Dictate</a>
 							<!-- microphone icon -->
 							<!-- <img src="//i.imgur.com/cHidSVu.gif" /> -->
 						</div>
@@ -2252,8 +2252,9 @@
 						    recognition.onend = function() {
 						      recognizing = false;
 							console.log("DICTATION STOPPED BY THE USER");
-							//restart
-							recognition.start();
+							//restart function (i.e. listening) after ending
+							//or after clicking "dictate"
+							recognition.start(); 
 						    };
 
 						    recognition.onresult = function(event) {
@@ -2281,7 +2282,6 @@
 								console.log("Char length (final + interim) exceeded! clearing old text."); 
 								final_transcript = '';
 								final_span.innerHTML = '';
-						    		interim_span.innerHTML = '';
 						       	}
 
 						    };
