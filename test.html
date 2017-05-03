@@ -2275,11 +2275,8 @@
 						      console.log(final_span.innerHTML.length + " (final)");
 						      console.log(interim_span.innerHTML.length + " (interim)");
 						
-							if (final_span.innerHTML.length > 200){
-								console.log("Char length (final) exceeded!");
-								final_transcript = '';
-						       	}else if (interim_span.innerHTML.length + final_span.innerHTML.length > 200){
-								console.log("Char length (final + interim) exceeded!"); 
+							if (interim_span.innerHTML.length + final_span.innerHTML.length > 400){
+								console.log("Char length (final + interim) exceeded! clearing old text."); 
 								final_transcript = '';
 						       	}
 
