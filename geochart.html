@@ -15,11 +15,11 @@
       //TO DO: use ipinfo.io (JSON) to convert these to cities.. make "Sessions by City" chart USA
       
      google.charts.load('current', {
-       'packages': ['geochart'],
+       'packages': ['geochart']
        // Note: you will need to get a mapsApiKey for your project.
        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
        // Apparently load-time will be slow without our own ApiKey...
-       'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+       //'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
      });
      google.charts.setOnLoadCallback(drawMarkersMap);
 
@@ -44,6 +44,7 @@
         displayMode: 'markers',
         colorAxis: {colors: ['green', 'yellow', 'red']},
         //attempt at dark theme, but need white borders/text (maybe do-able with CSS)
+        backgroundColor: { fill: '#FFF', stroke: '#000', strokeWidth: 30 }
         //backgroundColor: { fill: '#3F3F3F', stroke: '#ffffff'},
         //datalessRegionColor: '#151416',
       };
