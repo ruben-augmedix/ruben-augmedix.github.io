@@ -12,7 +12,7 @@
       var ip5 = "160.76.8.1"; //Omaha (Immanuel)
       var ip6 = "167.112.135.3"; //Delaware (Christiania Care)
       var ip7 = "216.68.236.9"; //Ohio (Trihealth)
-      
+      //TO DO: use ipinfo.io (JSON) to convert these to cities.. make "Sessions by City" chart USA
       
      google.charts.load('current', {
        'packages': ['geochart'],
@@ -43,8 +43,9 @@
         region: 'IT', //italy
         displayMode: 'markers',
         colorAxis: {colors: ['green', 'yellow', 'red']},
-        backgroundColor: { fill: '#3F3F3F', stroke: '#ffffff'},
-        datalessRegionColor: '#151416',
+        //attempt at dark theme, but need white borders/text (maybe do-able with CSS)
+        //backgroundColor: { fill: '#3F3F3F', stroke: '#ffffff'},
+        //datalessRegionColor: '#151416',
       };
 
       var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
