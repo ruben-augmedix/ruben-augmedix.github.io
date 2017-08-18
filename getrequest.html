@@ -11,10 +11,26 @@ $(document).ready(function(){
     });
 });
 </script>
+
+<script>
+$(document).ready(function(){
+    $("button2").click(function(){
+        $.getJSON("http://freegeoip.net/json/204.28.125.178", function(result){
+            $.each(result, function(i, field){
+                $("div").append(field + " ");
+            });
+        });
+    });
+});
+</script>    
+    
 </head>
 <body>
 
 <button>Send an HTTP GET request to a page and get the result back</button>
+    
+<button2>Get JSON data</button2>
+
 
 </body>
 </html>
