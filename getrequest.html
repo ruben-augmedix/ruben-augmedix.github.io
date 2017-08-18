@@ -2,19 +2,10 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $.getJSON("http://freegeoip.net/json/204.28.125.178", function(data, status){
-            alert("Data: " + data + "\nStatus: " + status);
-        });
-    });
-});
-</script>
 
 <script>
 $(document).ready(function(){
-    $("button2").click(function(){
+    $("button").click(function(){
         $.getJSON("http://freegeoip.net/json/204.28.125.178", function(result){
             $.each(result, function(i, field){
                 $("div").append(field + " ");
@@ -26,10 +17,8 @@ $(document).ready(function(){
     
 </head>
 <body>
-
-<button>Send an HTTP GET request to a page and get the result back</button>
     
-<button2>Get JSON data</button2>
+<button>Get JSON data</button>
 
 
 </body>
