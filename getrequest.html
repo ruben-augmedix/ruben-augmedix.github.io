@@ -5,7 +5,7 @@
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $.get("http://freegeoip.net/json/204.28.125.178", function(data, status){
+        $.getJSON("http://freegeoip.net/json/204.28.125.178", function(data, status){
             alert("Data: " + data + "\nStatus: " + status);
         });
     });
