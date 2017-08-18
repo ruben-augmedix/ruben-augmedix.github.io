@@ -6,7 +6,7 @@
 $(document).ready(function(){
     $("button").click(function(){
         $.getJSON("http://freegeoip.net/json/204.28.125.178", function(data, status){
-            alert("Data: " + data + "\nStatus: " + status);
+            alert("Data: " + JSON.stringify(data) + "\nStatus: " + status);
             console.log(JSON.stringify(data));
         });
     });
