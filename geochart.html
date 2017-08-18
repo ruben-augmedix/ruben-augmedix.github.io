@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
-    <script type='text/javascript'>
+<head>
+  <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+  <script type='text/javascript'>
       
       //eventually this will be an array...
       var ip1 = "204.28.125.178"; //sf
@@ -15,11 +15,11 @@
       //TO DO: use ipinfo.io (JSON) to convert these to cities.. make "Sessions by City" chart USA
       
      google.charts.load('current', {
-       'packages': ['geochart']
+       'packages': ['geochart'],
        // Note: you will need to get a mapsApiKey for your project.
        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
        // Apparently load-time will be slow without our own ApiKey...
-       //'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+       'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
      });
      google.charts.setOnLoadCallback(drawMarkersMap);
 
@@ -40,9 +40,10 @@
       ]);
 
       var options = {
-        region: 'IT', //italy
+        region: 'IT',
         displayMode: 'markers',
-        colorAxis: {colors: ['green', 'yellow', 'red']},
+        colorAxis: {colors: ['green', 'yellow', 'red']}
+
         //attempt at dark theme, but need white borders/text (maybe do-able with CSS)
         //backgroundColor: { fill: '#3F3F3F', stroke: '#ffffff'},
         //datalessRegionColor: '#151416',
@@ -52,8 +53,8 @@
       chart.draw(data, options);
     };
     </script>
-  </head>
-  <body>
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
-  </body>
+</head>
+<body>
+<div id="chart_div" style="width: 900px; height: 500px;"></div>
+</body>
 </html>
