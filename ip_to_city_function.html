@@ -4,9 +4,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 // create function PARAMETER = IP, RETURN = CITY
+
+
+
+var csv_string;
+
+var ip_array = csv_string.split(',');
+console.log(ip_array);
+
+
+var freegeoip_url = "http://freegeoip.net/json/"; //consider using https! (does it still work?)
+var ip = "204.28.125.178";
+
+var url_with_ip = freegeoip_url.concat(ip); //append ip to string
+console.log(url_with_ip);
+
 $(document).ready(function(){
     $("button").click(function(){
-        $.getJSON("http://freegeoip.net/json/204.28.125.178", function(result){
+        $.getJSON(url_with_ip, function(result){
 
             //console.log(JSON.stringify(result));
             console.log(JSON.stringify(result, undefined, 2)); // format with new lines
