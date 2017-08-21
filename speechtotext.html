@@ -103,15 +103,7 @@
 		    <script src="https://s3-us-west-1.amazonaws.com/augmedix.cloudfront.assets.test/clone/common/js/ie-support/respond.min.js"></script>
 	    <![endif]-->
 	    
-	    <!--Start of Zopim Live Chat Script-->
-		<script type="text/javascript">
-		window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-		d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-		_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-		$.src='//v2.zopim.com/?2UEZYtgR0LzSvm5ZFYqE8iS511U2pA0Y';z.t=+new Date;$.
-		type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-		</script>
-		<!--End of Zopim Live Chat Script-->
+
     </head>
     <body ondragstart="return false" draggable="false"
           ondragenter="event.dataTransfer.dropEffect='none'; event.stopPropagation(); event.preventDefault();"  
@@ -277,7 +269,15 @@
 									<div class="panel panel-default panel-height bg-gray">						         
 						              <div class="panel-body">
 						              	<div style="margin-top: 145px; font-size: 18px; ">
-						             		<span id="note-writer-enabled">Connect to a provider to see patients for the day</span>
+						             		<span id="note-writer-enabled">Speech-to-text assist demo</span>
+											<p> <br>"Scribe note quality" can be a common issue. This can be due to moments of choppy audio, network latency, or just inability to comprehend the english speech and conversation. The majority of our scribes are overseas, and english is their 2nd language, therefore the ability to understand certain American accents, idioms or mumbling patients may be difficult. </p>
+											<p>Come to the rescue – Speech-to-Text Assist. Much like the "closed captioning" feature in YouTube, which provides (best-effort) subtitles for the audio of the video, Speech-to-Text Assist will transcribe the Audio of the stream, and provide text results in real-time. This has the potential to significantly help scribes with note quality and inbound "choppy audio"
+											</p>
+
+											<p><br>In this demo, click the <b>Dictate</b> button and begin speaking.</br></p>
+
+
+
 						             		<span id="note-writer-notenabled" class="hidden">Your provider does not allow the storage of notes.<br> You may not use the note writer at this time.</span>
 						              	</div>						                
 						              </div>
@@ -2215,7 +2215,7 @@
 					<div class="panel-default" id="audio_header_container">
 					  <div class="panel-heading" id="audio_header_text">
 					    <h3 class="panel-title"><label>Speech to Text</label>
-					    <a id="audio-tooltip" href="https://cloud.google.com/speech/" data-toggle="tooltip" title="Google Cloud Speech API enables developers to convert <b>audio to text</b> by applying <b>powerful neural network models</b> in an easy to use API. You can transcribe the text of users dictating to an application's microphone, transcribe audio files or <b>transcribe a live stream</b>.<br><br> In this demo, click the Dictate button and begin speaking."></a></h3>		  
+					    <a id="audio-tooltip" href="https://cloud.google.com/speech/" data-toggle="tooltip" title="Google Cloud Speech API enables developers to convert <b>audio to text</b> by applying <b>powerful neural network models</b> in an easy to use API. You can transcribe the text of users dictating to an application's microphone, transcribe audio files or <b>transcribe a live stream</b>."></a></h3>
 					</div>
 					  <div class="panel-body">
 						<div>
@@ -2723,7 +2723,7 @@
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
             </div><!-- /.modal -->
-            
+
        <!--    <div class="modal fade" id="confirmAuth" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -2739,7 +2739,7 @@
                         </div>
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
-            </div> -->
+            </div>
             
             <div class="modal fade" id="confirmMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -4456,16 +4456,16 @@
 			var stopADLinit = false;
 
             // zopim chat setup
-            $zopim(function() {
-                $zopim.livechat.setName(scribeName);
-                $zopim.livechat.setEmail(scribeEmail);
-                $zopim.livechat.button.setPosition('br');
-                $zopim.livechat.window.setPosition('br');
-                $zopim.livechat.theme.setColor('#438EB9');
-                $zopim.livechat.bubble.setColor('#438EB9');
-                $zopim.livechat.theme.reload(); // apply new theme settings
-                
-            });
+            //$zopim(function() {
+                //$zopim.livechat.setName(scribeName);
+                //$zopim.livechat.setEmail(scribeEmail);
+                //$zopim.livechat.button.setPosition('br');
+                //$zopim.livechat.window.setPosition('br');
+                //$zopim.livechat.theme.setColor('#438EB9');
+                //$zopim.livechat.bubble.setColor('#438EB9');
+                //$zopim.livechat.theme.reload(); // apply new theme settings
+
+            //});
             
             $(document).ready(function(){
             	

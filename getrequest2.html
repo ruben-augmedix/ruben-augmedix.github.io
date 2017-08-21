@@ -5,9 +5,10 @@
 <script>
 $(document).ready(function(){
     $("button").click(function(){
-        $.getJSON("http://freegeoip.net/json/204.28.125.178", function(data, status){
-            alert("Data: " + JSON.stringify(data) + "\nStatus: " + status);
+        $.getJSON("http://freegeoip.net/json/198.217.64.126", function(data, status){
+
             console.log(JSON.stringify(data));
+            alert("Data: " + JSON.stringify(data) + "\nStatus: " + status);
         });
     });
 });
